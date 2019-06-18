@@ -7,8 +7,14 @@ do
 	if [[ $response -eq $files ]]
 	then
 		let state=0
+	elif [[ $response -gt $files ]]
+	then
+		echo "Sorry, that number is too high."
+		echo "Try again."
 	else
-		echo "Sorry, that is incorrect. Try again."
+		echo "Sorry, that number is too low."
+		echo "Try again."
 	fi
 done
-echo "Congratulations! That is correct!"
+echo "Congratulations!"
+echo "That is correct!"
